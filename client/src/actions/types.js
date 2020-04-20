@@ -1,0 +1,2 @@
+export const SHOW_ALL_POSTS = "SHOW_ALL_POSTS";
+export const NOTIFICATION = "NOTIFICATION";
