@@ -7,7 +7,10 @@
     "start": "node server.js",
     "server:dev": "nodemon server.js --ignore client",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server:dev\" \"npm run client\""
+    "client:install": "npm install --prefix client",
+    "client:build": "npm run build --prefix client",
+    "dev": "concurrently \"npm run server:dev\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "",
   "license": "ISC",
