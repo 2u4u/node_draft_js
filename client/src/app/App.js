@@ -35,7 +35,7 @@ function App() {
             <Route exact path="/add" component={Add} />
             <Route exact path="/view" component={View} />
             <Route exact path="/edit" component={Add} />
-            <Route path="/" component={App} />
+            <Route path="/" component={View} />
           </Switch>
         </Content>
       </Router>
