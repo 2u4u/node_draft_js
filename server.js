@@ -80,5 +80,5 @@ app.delete("/api/:post_id", (req, res) => {
 });
 
 app.listen(port, function () {
-  console.log('App listening on port 3000!');
+  console.log('App listening on port 5000!');
 });
