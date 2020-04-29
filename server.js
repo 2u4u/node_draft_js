@@ -88,5 +88,5 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 app.listen(port, function () {
-  console.log('App listening on port 5000!');
+  console.log('App listening on port ' + port);
 });
