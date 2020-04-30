@@ -13,7 +13,7 @@ mongoose
   .catch(err => console.log("MongoDB error -> ", err));
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = require("./config/keys").PORT || 5000;
 
 // Load Model
 const Post = require('./models/post.model');
@@ -80,7 +80,7 @@ app.delete("/api/:post_id", (req, res) => {
     .catch(err => console.log("Post delete err -> ", err));
 });
 
-if (process.env.NODE_ENV === "production") {
+if (require("./config/keys").NODE_ENV === "production") {
   app.use(express.static("client/build"));
 
   app.get("*", (req, res) => {
